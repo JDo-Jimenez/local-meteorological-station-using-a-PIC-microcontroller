@@ -91,7 +91,7 @@ void serial_isr()
    {
        for (i=0; i<=7; i++)
        {
-          putc(dato[i]);         // Envia buffer de datos
+          putc(dato[i]);         //Envia buffer de datos
        }
    }
     if(valor==0x32) //Pulso en VB6 velocidad
@@ -122,7 +122,7 @@ void main()
    ext_int_edge(L_TO_H);
 
 
-   //inicialización variables
+   //inicializaciÃ³n variables
    
    j=0;
    byt=0;
@@ -147,7 +147,7 @@ void main()
       //humedad2=((salida-1.3)*53.3+10.0);
       delay_ms(10);
       
-      //********************PRESIÓN**************;
+      //********************PRESIÃ“N**************;
       set_adc_channel(2);
       delay_us(10);
       Vout=Read_ADC();
@@ -188,7 +188,7 @@ void main()
        //*******************VELOCIDAD VIENTO*********;
 
        vel=pulsos;
-        velocidad =(pulsos*0.22)/1.0;  // [(D*Pi/2)*Pulsos]/temporización  =  0,07*Pi*Pulsos/1s= 0,22*pulsos/1
+        velocidad =(pulsos*0.22)/1.0;  // [(D*Pi/2)*Pulsos]/temporizaciÃ³n  =  0,07*Pi*Pulsos/1s= 0,22*pulsos/1
          pulsos=0;
 
      // //  Vh=make8(vel,1);
